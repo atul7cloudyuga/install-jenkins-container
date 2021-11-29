@@ -32,13 +32,15 @@ apt-get -y install docker-ce
 now you will be inside your docker and run '''docker ps''' you will get something like this
 
 
-
+```
 root@cf1fd5908a1c:/# docker ps
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                               NAMES
 cf1fd5908a1c        jenkins/jenkins:lts   "/sbin/tini -- /usr/…"   2 hours ago         Up 12 minutes       0.0.0.0:8080->8080/tcp, 50000/tcp   jenkins
 root@cf1fd5908a1c:/#   
+```
 this means you have succesfully created the image
 
 Now to give jenkins actions access to all users for that run this command
-
+```
 chmod 777 /var/run/docker.sock
+```
